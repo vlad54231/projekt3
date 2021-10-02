@@ -1,0 +1,65 @@
+// main: ../style.less
+.nav{
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media @mobile{
+        display: none;
+        position: absolute;
+        top: 100%;
+        height: auto;
+        padding: 1rem;
+        right: 0;
+        z-index: 19999;
+        background: fade(@white, 90%);
+        text-align: right;
+        box-shadow: 0 5px 10px @black;
+    }
+    &.show{
+        display: flex;
+    }
+}
+.nav__link{
+    color: @black;
+    font-size: 0.93rem;
+    font-weight: 700;
+    font-family:'Montserrat',sans-serif;
+    text-decoration: none;
+    margin-left: 2rem;
+    position: relative;
+    text-transform: uppercase;
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 3px;
+
+        background: @black;
+        bottom: -3px;
+        left: 0;
+        transition: width .2s linear;
+    }
+    &:hover:not(.nav__link--btn){
+        &:after{
+            width: 100%;
+        }
+    }
+    &--btn{
+        padding: 0.66rem 2rem;
+        border-radius: 20px;
+        border: 2px solid @black;
+        transition: color .2s linear, background .2s linear;
+        &:hover{
+            background: @black;
+            color: @white;
+        }
+    }
+    @media @mobile{
+        width: 100%;
+        margin-left: 0;
+        padding: .5rem 1rem;
+    }
+}

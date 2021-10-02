@@ -1,0 +1,73 @@
+// main: ../style.less
+.aboutme{
+    margin: 8.4rem 0;
+}
+.aboutme__inner{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    width: 100%;
+}
+.aboutme__photo, .aboutme__contecnt{
+    width: 50%;
+    @media @tablet{
+        width: 100%;
+
+    }
+}
+.aboutme__photo{
+    position: relative;
+    .img{
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        @media @tablet{
+            position: relative;
+        }
+    }
+    @media @tablet{
+        order: 2;
+
+    }
+}
+.aboutme__contecnt{
+    width: 50%;
+    margin-top: 2rem;
+    padding-left: 3.2rem;
+    @media @tablet{
+        order: 1;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-left: 0;
+    }
+}
+.aboutme__title{
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    color: @black;
+    @media @notebook{
+        font-size: 2.5rem;
+    }
+}
+.aboutme__who{
+    text-transform: uppercase;
+    position: relative;
+    left: -10px;
+    margin-bottom: 1.4rem;
+    line-height: 1.1;
+    font-size: 6.1rem;
+    font-weight: 700;
+    color: fade(@black, 15%);
+    @media @notebook{
+        font-size: 4rem;
+    }
+}
+.aboutme__text{
+    line-height: 2;
+    font-size: 0.7rem;
+    font-weight: 300;
+    margin-bottom: 2.8rem;
+    color: @gray;
+}

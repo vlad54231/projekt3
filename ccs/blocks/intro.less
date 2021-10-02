@@ -1,0 +1,56 @@
+// main: ../style.less
+.intro__inner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid fade(@gray, 30%);
+    padding-top: 6.6rem;
+    padding-bottom: 8rem;
+    @media @tablet{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+.intro__cont{
+    width: 50%;
+    z-index: 2;
+    @media @mobile-sm{
+        width: 100%;
+
+    }
+}
+.intro__photo{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    @media @tablet{
+        width: 350px;
+    }
+    @media @mobile-sm{
+        display: none;
+
+    }
+}
+.intro__suptitle{
+    font-size: 2.13rem;
+    color: @black;
+    font-weight: 200;
+    @media @tablet{
+        font-size: 2rem;
+    }
+}
+.intro__title{
+    font-size: 3rem;
+    color: @black;
+    font-weight: 700;
+    @media @tablet{
+        font-size: 2rem;
+    }
+}
+.intro__text{
+    font-size: 18px;
+    color: fade(@black, 70%);
+    font-weight: 300;
+    margin-bottom: 28px;
+}
